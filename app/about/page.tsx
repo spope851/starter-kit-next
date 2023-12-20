@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { InitHero } from '../components/InitHero'
 
 const MEMBERS = [
     {
@@ -28,9 +29,9 @@ export default function Home() {
         <!--                    LANDING                   -->
         <!-- ============================================ --> */}
     
-        <section className={styles.initHero}>
+        <InitHero className={styles.initHero} component="section">
             <h1 id="home-h">About Company</h1>
-        </section>
+        </InitHero>
 
         {/* <!-- ============================================ -->
         <!--                     About                    -->
@@ -43,7 +44,7 @@ export default function Home() {
                 </div>
                 <div className={styles.content}>
                     <span className={styles.topper}>Who We Are</span>
-                    <h2>Headline that describes your business.  Make it two lines</h2>
+                    <h2 id="aboutHeadline">Headline that describes your business.  Make it two lines</h2>
                     <div aria-hidden="true" className={styles.decoration}>
                         <Image src="/images/leaf.svg" alt="" width="30" height="30" />
                         <div className={styles.line}></div>

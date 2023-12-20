@@ -1,6 +1,6 @@
 "use client";
 import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material";
-import React, { ReactNode, createContext, useMemo, useState } from "react";
+import React, { ReactNode, createContext, useEffect, useMemo, useState } from "react";
 
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
@@ -11,19 +11,22 @@ declare module '@mui/material/Button' {
 export const ThemeModeContext = createContext({ toggleThemeMode: () => {} })
 
 export const ThemeProvider: React.FC<{children: ReactNode}> = ({children}) => {
-    const [mode, setMode] = useState<"dark" | "light">("light")
+    const [darkMode, setDarkMode] = useState<string | null>()
     const themeMode = useMemo(
       () => ({
-        toggleThemeMode: () => {
-          setMode((prevMode) => (prevMode === "light" ? "dark" : "light"))
-        },
+        toggleThemeMode: () => setDarkMode((prevMode) => prevMode === "enable" ? "disable" : "enable")
       }),
-      []
+      [darkMode]
     )
+
+    useEffect(() => {
+        if (darkMode) localStorage.setItem("darkMode", darkMode === "enable" ? "enable" : "disable")
+        else setDarkMode(localStorage.getItem("darkMode") || "disable")
+    }, [darkMode])
 
     const theme = useMemo(() => createTheme({
         palette: {
-            mode
+            mode: darkMode === "enable" ? "dark" : 'light'
         },
         components: {
             MuiButton: {
@@ -83,7 +86,7 @@ export const ThemeProvider: React.FC<{children: ReactNode}> = ({children}) => {
                 ]
             }
         }
-    }), [mode])
+    }), [darkMode])
 
     return (
         <ThemeModeContext.Provider value={themeMode}>

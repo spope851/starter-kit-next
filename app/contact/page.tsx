@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import styles from './page.module.css'
+import { InitHero } from '../components/InitHero'
 
 export default function Home() {
   return (
@@ -9,9 +10,9 @@ export default function Home() {
         <!--                    LANDING                   -->
         <!-- ============================================ --> */}
     
-        <section className={styles.initHero}>
+        <InitHero className={styles.initHero} component="section">
             <h1 id="home-h">Contact Business</h1>
-        </section>
+        </InitHero>
 
 {/* <!-- ============================================ -->
 <!--                    FORM                      -->
@@ -22,7 +23,7 @@ export default function Home() {
         <span className={styles.topper}>Business Name</span>
         <h2>Send a Message</h2>
         <p>If you have any questions or concerns please feel free to reach out to us.  we respond to every call and email.</p>
-        <form className={styles.contact} name="Contact Form" method="post" data-netlify-recaptcha="true" data-netlify="true">
+        <form id="contact" className={styles.contact} name="Contact Form" method="post" data-netlify-recaptcha="true" data-netlify="true">
                 <div className={styles.inputGroup}>
                     <label htmlFor="name">Full Name</label>
                     <input aria-label="name" className={styles.name} name="name" placeholder="Full Name" type="text" tabIndex={1} required />

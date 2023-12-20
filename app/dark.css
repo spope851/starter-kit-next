@@ -71,7 +71,7 @@
   body.dark-mode .about .right-section .topper {
     color: var(--shade);
   }
-  body.dark-mode .about .right-section h2 {
+  body.dark-mode .about .right-section h2, body.dark-mode #aboutHeadline {
     color: #fff;
   }
   body.dark-mode .about .right-section h2:before {
@@ -160,7 +160,7 @@
   body.dark-mode #footer .button-solid:before {
     background: var(--tint);
   }
-  body.dark-mode .init-hero {
+  body.dark-mode .initHero {
     background: url("/images/about-dark.jpg");
     background-size: cover;
     background-position: center 80%;
@@ -199,13 +199,13 @@
   body.dark-mode .form label {
     color: #fff;
   }
-  body.dark-mode .form ::placeholder {
+  body.dark-mode #contact ::placeholder {
     opacity: .3;
   }
   body.dark-mode .form .contact-right {
     background: var(--tint);
   }
-  body.dark-mode .reviews .name {
+  body.dark-mode .reviews .name, body.dark-mode #contact label, body.dark-mode #testimonialName {
     color: #fff;
   }
 }

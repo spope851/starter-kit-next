@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { headers } from 'next/headers'
 import { ThemeProvider } from './context/theme'
 import { DarkModeButton } from './components/DarkModeButton'
+import { Body } from './components/Body'
 
 export const metadata: Metadata = {
   title: 'Title | Business | Location, WA',
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <ThemeProvider>
     <html lang="en">
-    <body>
+    <Body>
     
         <a className="skip" aria-label="skip to main content" href="#main">Click To Skip To Main</a>
     
@@ -115,7 +116,7 @@ export default function RootLayout({
         </div>
     </div>
 </footer>
-</body>
+</Body>
     </html>
     </ThemeProvider>
   )

@@ -6,7 +6,6 @@
 @media only screen and (min-width: 0em) {
   .initHero {
     min-height: 50vh;
-    background: url("/images/about-mobile.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,7 +53,6 @@
 @media only screen and (min-width: 48em) {
   .initHero {
     font-size: 20px;
-    background: url("/images/about.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

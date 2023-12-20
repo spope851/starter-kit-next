@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import { ReactNode, Fragment } from 'react'
+import { InitHero } from '../components/InitHero'
 
 const REVIEWS = [
     {
@@ -33,9 +34,9 @@ export default function Home() {
         <!--                    LANDING                   -->
         <!-- ============================================ --> */}
     
-        <section className={styles.initHero}>
+        <InitHero className={styles.initHero} component="section">
             <h1 id="home-h">Testimonials</h1>
-        </section>
+        </InitHero>
 
         {/* <!-- ============================================ -->
         <!--                 TESTOMONIES                  -->
@@ -51,7 +52,7 @@ export default function Home() {
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero officiis assumenda voluptatum dolor quaerat labore quis commodi impedit quod inventore reiciendis beatae, ab molestias veniam quam sequi magnam natus aut?
             </p>
-            <span className={styles.name}>{name}</span></Fragment>)}
+            <span id="testimonialName" className={styles.name}>{name}</span></Fragment>)}
         </section>
     </main>
   )
