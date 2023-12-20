@@ -1,0 +1,304 @@
+/* /css/about.css */
+/*-- -------------------------- -->
+<---          Landing           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .initHero {
+    min-height: 50vh;
+    background: url("/images/about-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .initHero:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .initHero h1 {
+    color: #fff;
+    font-size: 3.2em;
+    text-align: center;
+    margin: 0;
+    position: relative;
+  }
+  .initHero h1:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 200%;
+    width: 40%;
+    background: transparent;
+    border: 0.15625em solid var(--primary);
+    opacity: .5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  .initHero {
+    font-size: 20px;
+    background: url("/images/about.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  .initHero {
+    min-height: 15em;
+    height: 15em;
+    margin-top: 7.4em;
+    background-position: center 80%;
+    background-attachment: fixed;
+    font-size: inherit;
+  }
+}
+/*-- -------------------------- -->
+<---           Form             -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .form {
+    padding: 5em 0;
+    width: 96%;
+    max-width: 35em;
+    margin: auto;
+  }
+  .form .topper {
+    font-size: 0.7em;
+    line-height: 1.35714286;
+    color: var(--primary);
+    letter-spacing: .06em;
+    margin-bottom: 0.42857143em;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .form h2 {
+    font-size: 1.8em;
+    line-height: 1.16666667;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 0.66666667em;
+    position: relative;
+  }
+  .form p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #595959;
+    margin-bottom: 2.66666667em;
+  }
+  .form .contact {
+    margin-bottom: 5em;
+  }
+  .form .contact .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+  }
+  .form .contact .inputGroup label {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 0.375em;
+  }
+  .form .contact .inputGroup input[type="text"],
+  .form .contact .inputGroup input[type="email"],
+  .form .contact .inputGroup input[type="tel"],
+  .form .contact .inputGroup input[type="url"],
+  .form .contact .inputGroup textarea {
+    height: 3.35em;
+    border: none;
+    border-bottom: 0.05em solid #d4d4d4;
+  }
+  .form .contact .inputGroup input:focus {
+    border: 0.05em solid var(--primary);
+  }
+  .form .contact .inputGroup textarea {
+    min-height: 10em;
+    padding-top: 1em;
+  }
+  .form .contact .inputGroup ::placeholder {
+    color: #d4d4d4;
+    font-family: "Roboto", sans-serif;
+  }
+  .form .contact .button-solid {
+    border: none;
+  }
+  .form .contactRight {
+    background: #10625e;
+    padding: 2.25em 1.7em;
+    width: 100%;
+    max-width: 15em;
+    margin: auto;
+    border-radius: 0.25em;
+  }
+  .form .contactRight .heading {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: bold;
+    padding-left: 0.83333333em;
+    border-left: 0.20833333em solid var(--primary);
+    display: block;
+    margin-bottom: 0.83333333em;
+  }
+  .form .contactRight .infoGroup {
+    margin-bottom: 1.8em;
+  }
+  .form .contactRight .infoGroup:last-of-type {
+    margin-bottom: 0;
+  }
+  .form .contactRight .info {
+    font-size: 0.8em;
+    line-height: 1.75;
+    color: #fff;
+    opacity: .9;
+    text-decoration: none;
+    display: block;
+  }
+}
+/* Mobile Landscape */
+@media only screen and (min-width: 568px) {
+  .form .contact {
+    max-width: 35em;
+  }
+  .form .contactRight {
+    max-width: 35em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .form .contactRight .infoGroup {
+    width: 40%;
+    margin-left: 2.5em;
+  }
+  .form .contactRight .infoGroup:nth-of-type(3) {
+    margin-bottom: 0;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  .form .contact {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form .contact .inputGroup {
+    width: 48%;
+    margin-bottom: 2.5em;
+    position: relative;
+  }
+  .form .contact .inputGroup:nth-of-type(5) {
+    width: 100%;
+  }
+  .form .contact .inputGroup:last-of-type {
+    width: 100%;
+  }
+  .form .contact .inputGroup:hover .hoverBox {
+    height: 2.3em;
+    border: 0.05em solid var(--primary);
+    pointer-events: none;
+  }
+  .form .contact .inputGroup:hover input[type="text"],
+  .form .contact .inputGroup:hover input[type="email"],
+  .form .contact .inputGroup:hover input[type="tel"],
+  .form .contact .inputGroup:hover input[type="url"],
+  .form .contact .inputGroup:hover textarea {
+    padding-left: 1em;
+  }
+  .form .contact .inputGroup input[type="text"],
+  .form .contact .inputGroup input[type="email"],
+  .form .contact .inputGroup input[type="tel"],
+  .form .contact .inputGroup input[type="url"],
+  .form .contact .inputGroup textarea {
+    border-bottom: none;
+    position: relative;
+    transition: padding .3s;
+    background: transparent;
+  }
+  .form .contact .inputGroup .hoverBox {
+    position: absolute;
+    display: block;
+    height: 0.05em;
+    width: 100%;
+    background: transparent;
+    border: 0.05em solid #e9e8e8;
+    opacity: 1;
+    bottom: -0.05em;
+    left: 0;
+    z-index: 10;
+    transition: height .3s, border .3s;
+    z-index: -1;
+  }
+  .form .contact .inputGroupTextarea:hover .hoverBox {
+    height: 6.75em;
+  }
+  .form .contact .inputGroupTextarea {
+    width: 100%;
+  }
+  .form .contact .inputGroupTextarea .inputGroup {
+    width: 100%;
+  }
+  .form .contact .formSubmit {
+    margin-left: auto;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  .form {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    font-size: 1.5vw;
+    width: 100%;
+    max-width: 57.2em;
+  }
+  .form .leftSection {
+    width: 37.5em;
+    margin-left: 0;
+  }
+  .form .contact {
+    margin-right: 0;
+    max-width: none;
+  }
+  .form .contactRight {
+    flex-direction: column;
+    max-width: 15em;
+    margin: 0;
+    height: 27.7em;
+    margin-top: 5em;
+  }
+  .form .contactRight .infoGroup {
+    margin-left: 0;
+    width: 100%;
+  }
+  .form .contactRight .infoGroup:nth-of-type(3),
+  .form .contactRight .infoGroup:last-of-type {
+    margin-bottom: 1.8em;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  .form {
+    font-size: inherit;
+  }
+}
