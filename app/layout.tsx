@@ -5,6 +5,7 @@ import './dark-root-styles.css'
 import Image from 'next/image'
 import { headers } from 'next/headers'
 import { ThemeProvider } from './context/theme'
+import { DarkModeButton } from './components/DarkModeButton'
 
 export const metadata: Metadata = {
   title: 'Title | Business | Location, WA',
@@ -67,10 +68,7 @@ export default function RootLayout({
                             <li className="nav-li"><a id={`${isActive("contact") && "active-menu"}`} className="link" href="/contact">Contact</a></li>
                         </ul>
                     </div>
-                    <button className="dark-mode-button top-dark-mode-button" aria-label="dark mode toggle">
-                        <Image className="moon" aria-hidden="true" src="/images/moon.svg" alt="" width="24" height="24"/>
-                        <Image className="sun" aria-hidden="true" src="/images/sun.svg" alt="" width="24" height="24"/>
-                    </button>
+                    <DarkModeButton/>
                 </div>
             </nav>
         </header>

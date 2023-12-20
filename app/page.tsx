@@ -1,6 +1,7 @@
-import Image from 'next/image'
 import styles from './page.module.css'
-import { Button } from '@mui/material'
+import { Box, Button } from '@mui/material'
+import { Hero } from './components/Hero'
+import { CallNow } from './components/CallNow'
 
 export default function Home() {
   return (
@@ -10,10 +11,10 @@ export default function Home() {
     <!--                    LANDING                   -->
     <!-- ============================================ --> */}
 
-    <section className={styles.hero}>
+    <Hero component="section" className={styles.hero}>
         <div className={styles.heroContent}>
             <div className={styles.heroText}>
-                <h1 id="home-h">Main headline, put top keyword here</h1>
+                <h1>Main headline, put top keyword here</h1>
                 <p>
                     Expand on the keyword with more keywords and add a list of related services that you do and include the city, state of your service area.  
                 </p>
@@ -27,20 +28,13 @@ export default function Home() {
                     }}>
                         About Us
                     </a>
-                    <a className={styles.callNow} href="tel:555-213-9120">
-                        <Image className={styles.light} decoding="async" src="/images/phone.svg" alt="" aria-hidden="true" width="21" height="21"/>
-                        <Image className={styles.dark} decoding="async" src="/images/phone-dark.svg" alt="" aria-hidden="true" width="21" height="21"/>
-                        <div className={styles.group}>
-                            <span className={styles.text}>Call Now</span>
-                            <span className={styles.number}>(555) 213-9120</span>
-                        </div>
-                    </a>
+                    <CallNow className={styles.callNow} />
                 </div>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img decoding="async" src="/images/ryan-caselli.png" alt="" className={styles.businessCasual}/>
         </div>
-    </section>
+    </Hero>
 
     {/* <!-- ============================================ -->
     <!--                  Services                    -->

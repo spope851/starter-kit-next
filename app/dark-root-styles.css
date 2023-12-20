@@ -118,7 +118,7 @@
     color: #fff;
     opacity: .9;
   }
-  body.dark-mode p {
+  body.dark-mode p, body.dark-mode h1 {
     color: #fff !important;
     opacity: .9;
   }

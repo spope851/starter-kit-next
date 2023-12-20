@@ -1,6 +1,6 @@
 "use client";
 import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material";
-import React, { ReactNode, useMemo } from "react";
+import React, { ReactNode, createContext, useMemo, useState } from "react";
 
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
@@ -8,9 +8,23 @@ declare module '@mui/material/Button' {
   }
 }
 
+export const ThemeModeContext = createContext({ toggleThemeMode: () => {} })
+
 export const ThemeProvider: React.FC<{children: ReactNode}> = ({children}) => {
+    const [mode, setMode] = useState<"dark" | "light">("light")
+    const themeMode = useMemo(
+      () => ({
+        toggleThemeMode: () => {
+          setMode((prevMode) => (prevMode === "light" ? "dark" : "light"))
+        },
+      }),
+      []
+    )
 
     const theme = useMemo(() => createTheme({
+        palette: {
+            mode
+        },
         components: {
             MuiButton: {
                 defaultProps: {
@@ -69,9 +83,11 @@ export const ThemeProvider: React.FC<{children: ReactNode}> = ({children}) => {
                 ]
             }
         }
-    }), [])
+    }), [mode])
 
     return (
-        <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+        <ThemeModeContext.Provider value={themeMode}>
+            <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+        </ThemeModeContext.Provider>
     )
 }

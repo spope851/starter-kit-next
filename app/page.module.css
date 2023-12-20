@@ -24,7 +24,6 @@
     display: block;
     height: 100%;
     width: 100%;
-    background: #ECEFFE;
     opacity: .9;
     top: 0;
     left: 0;
@@ -82,9 +81,6 @@
     display: inline-block;
     width: 1.16666667em;
     height: 1.16666667em;
-  }
-  .hero .callNow .dark {
-    display: none;
   }
   .hero .callNow span {
     display: block;
