@@ -81,6 +81,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
                     ':before': {
                       width: '100%',
                     },
+                    background: '#0e817c',
                     cursor: 'pointer',
                     WebkitTransition: '.2s ease',
                     transition: '.2s ease',

@@ -1,5 +1,7 @@
 'use client'
+import { Button } from '@mui/material'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -7,6 +9,7 @@ export const Footer: React.FC = () => {
   const { t } = useTranslation('global', {
     keyPrefix: 'footer',
   })
+  const router = useRouter()
 
   return (
     <footer id="footer">
@@ -93,11 +96,18 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="buttons">
-            <a className="button-solid" href="/contact">
+            <Button
+              onClick={() => router.push('/contact')}
+              sx={{
+                m: 0,
+                height: '2.94444444em',
+                pt: '0.16666667em',
+                width: '13.88888889em',
+              }}
+            >
               Call to action button
-            </a>
+            </Button>
           </div>
         </div>
       </div>

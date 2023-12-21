@@ -43,23 +43,11 @@
   body.dark-mode .hero .callNow .number {
     color: #fff;
   }
-  body.dark-mode .hero .button-solid {
-    background: var(--darkPrimary);
-  }
-  body.dark-mode .hero .button-solid:before {
-    background: var(--tint);
-  }
   body.dark-mode .services .service {
     background: var(--darkPrimary);
   }
-  body.dark-mode .services .service .button-solid:before {
-    background: var(--tint);
-  }
   body.dark-mode .services .service:nth-of-type(2) {
     background: var(--tint);
-  }
-  body.dark-mode .services .service:nth-of-type(2) .button-solid:before {
-    background: var(--primary);
   }
   body.dark-mode .about:before {
     background: #0a0a0a;
@@ -85,9 +73,6 @@
   body.dark-mode .about .right-section .decoration .line {
     background: var(--shade);
   }
-  body.dark-mode .about .right-section .button-solid {
-    background: var(--darkPrimary);
-  }
   body.dark-mode #how-we-know {
     box-shadow: none;
   }
@@ -100,15 +85,6 @@
   }
   body.dark-mode #how-we-know .right-section {
     background: var(--darkPrimary);
-  }
-  body.dark-mode #how-we-know .right-section .button-solid {
-    color: var(--darkPrimary);
-  }
-  body.dark-mode #how-we-know .right-section .button-solid::before {
-    background: var(--tint);
-  }
-  body.dark-mode #how-we-know .right-section .button-solid:hover {
-    color: #fff;
   }
   body.dark-mode #get-started .topper {
     color: var(--shade);
@@ -127,12 +103,6 @@
   }
   body.dark-mode #get-started .steps .dots .dot:nth-of-type(5) {
     background: var(--primary) !important;
-  }
-  body.dark-mode #get-started .button-solid {
-    background: var(--darkPrimary);
-  }
-  body.dark-mode #get-started .button-solid:before {
-    background: var(--tint);
   }
   body.dark-mode .reviews .topper {
     color: var(--shade);
@@ -154,12 +124,6 @@
   }
   body.dark-mode #footer {
     background: #0e0d0d;
-  }
-  body.dark-mode #footer .button-solid {
-    background: var(--darkPrimary);
-  }
-  body.dark-mode #footer .button-solid:before {
-    background: var(--tint);
   }
   body.dark-mode .initHero {
     background: url('/images/about-dark.jpg');

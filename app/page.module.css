@@ -60,12 +60,6 @@
     display: flex;
     justify-content: flex-start;
   }
-  .hero .button-solid {
-    margin: 0;
-    margin-right: 2.88888889em;
-    height: 2.94444444em;
-    padding-top: 0.16666667em;
-  }
   .hero .callNow {
     height: 2.94444444em;
     width: 9.11111111em;
@@ -169,15 +163,6 @@
     order: 1;
     margin-bottom: 0;
   }
-  .services .service:nth-of-type(2) .button-solid {
-    color: #10625e;
-  }
-  .services .service:nth-of-type(2) .button-solid:before {
-    background: var(--primary);
-  }
-  .services .service:nth-of-type(2) .button-solid:hover {
-    color: #fff;
-  }
   .services .service h2 {
     color: #fff;
     font-size: 1.2em;
@@ -197,13 +182,6 @@
     text-align: left;
     margin-bottom: 1.66666667em;
     opacity: 1;
-  }
-  .services .service .button-solid {
-    background: #fff;
-    color: #10625e;
-  }
-  .services .service .button-solid:hover {
-    color: #fff;
   }
 }
 /* Large Phone */
@@ -232,10 +210,6 @@
     max-width: 20em;
     margin-left: auto;
     margin-right: auto;
-  }
-  .services .service:nth-of-type(2) .button-solid {
-    margin: auto;
-    display: block;
   }
 }
 /* Tablet */

@@ -4,9 +4,11 @@ import { Button } from '@mui/material'
 import { Hero } from './components/Hero'
 import { CallNow } from './components/CallNow'
 import { useTranslation } from 'react-i18next'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const { t } = useTranslation()
+  const router = useRouter()
 
   return (
     <main className={styles.main} id="main">
@@ -20,10 +22,9 @@ export default function Home() {
             <h1>{t('main.head')}</h1>
             <p>{t('main.subHead')}</p>
             <div className={styles.buttons}>
-              <a
-                className="button-solid"
-                href="/about"
-                style={{
+              <Button
+                onClick={() => router.push('/about')}
+                sx={{
                   margin: 0,
                   marginRight: '2.88888889em',
                   height: '2.94444444em',
@@ -31,7 +32,7 @@ export default function Home() {
                 }}
               >
                 About Us
-              </a>
+              </Button>
               <CallNow className={styles.callNow} />
             </div>
           </div>
@@ -60,9 +61,7 @@ export default function Home() {
           </p>
 
           <Button
-            component="a"
-            href="/contact"
-            className="button-solid"
+            onClick={() => router.push('/contact')}
             sx={{
               background: '#fff !important',
               color: '#0e817c !important',
@@ -86,9 +85,7 @@ export default function Home() {
             provide.
           </p>
           <Button
-            component="a"
-            href="/contact"
-            className="button-solid"
+            onClick={() => router.push('/contact')}
             sx={{
               background: '#fff !important',
               color: '#10625e !important',
@@ -112,9 +109,7 @@ export default function Home() {
             fermentum id augue .
           </p>
           <Button
-            component="a"
-            href="/contact"
-            className="button-solid"
+            onClick={() => router.push('/contact')}
             sx={{
               background: '#fff !important',
               color: '#0e817c !important',

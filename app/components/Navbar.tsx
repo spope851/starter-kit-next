@@ -14,7 +14,11 @@ export const Navbar: React.FC = () => {
   return (
     <ul id="on-top" className="navbar-links">
       <li className="nav-li">
-        <a id={`${isActive('') && 'active-menu'}`} onClick={() => router.push('/')}>
+        <a
+          id={`${isActive('') && 'active-menu'}`}
+          onClick={() => router.push('/')}
+          className="link"
+        >
           {t('home')}
         </a>
       </li>

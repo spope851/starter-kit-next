@@ -126,15 +126,11 @@ export default function Home() {
                 name="submit"
                 type="submit"
                 id="contact-submit"
-                className="button-solid"
                 data-submit="...Sending"
                 sx={{
                   px: '6px',
                   py: '1px',
                   border: 'none',
-                  ':hover': {
-                    background: '#0e817c',
-                  },
                 }}
               >
                 Submit

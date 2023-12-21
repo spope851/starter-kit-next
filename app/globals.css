@@ -48,21 +48,6 @@
   body {
     font-size: 17px;
   }
-  .section {
-    padding-top: 5em;
-    padding-bottom: 5em;
-  }
-  .wrapper {
-    width: 100%;
-    max-width: 22.5em;
-    margin: auto;
-  }
-  .mobile {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
   .skip {
     position: absolute;
     opacity: 0;
@@ -122,82 +107,14 @@
     padding: 0 0.5em;
     margin: auto;
   }
-  /* hidden desktop elements */
-  .topper-flex,
-  #brand,
-  .call-strip-button,
-  .background {
-    display: none;
-  }
   button {
     text-transform: uppercase;
-  }
-  .button-solid {
-    color: #fff;
-    display: block;
-    margin: auto;
-    text-align: center;
-    text-decoration: none;
-    background: var(--primary);
-    line-height: 2.65;
-    width: 9em;
-    border-radius: 0.16666667em;
-    font-size: 0.9em;
-    font-family: 'Roboto', sans-serif;
-    -webkit-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
-    transition: 0.2s ease;
-    display: inline-block;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-  }
-  .button-solid:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 0%;
-    background: #10625e;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 0.16666667em;
-    transition: width 0.3s;
-  }
-  .button-solid:hover:before {
-    width: 100%;
   }
   button:hover {
     cursor: pointer;
     -webkit-transition: 0.2s ease;
     -o-transition: 0.2s ease;
     transition: 0.2s ease;
-  }
-  .button-transparent {
-    display: inline-block;
-    background: transparent;
-    border: 0.05555556em solid #ffffff;
-    border-radius: 0.16666667em;
-    text-align: center;
-    font-size: 0.9em;
-    margin: 0.55555556em 0;
-    padding: 0px 30px;
-    color: #ffffff;
-    text-decoration: none;
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-    white-space: nowrap;
-    line-height: 2.77777778;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-  .button-transparent:hover {
-    color: #fff;
-    background: var(--primary);
-    border: none;
   }
   .hamburger {
     padding: 0;
@@ -400,27 +317,8 @@
 	<---         NAVIGATION         -->
 	<--- -------------------------- -*/
   /* Hidden Elements */
-  .navbar-menu img,
-  .call-us,
-  .quote-nav-button {
+  .navbar-menu img {
     display: none;
-  }
-  .main-skip {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-  }
-  .nav-comb {
-    display: block !important;
-    position: absolute;
-    width: 26.5em;
-    -webkit-transform: rotate(120deg);
-    -ms-transform: rotate(120deg);
-    transform: rotate(120deg);
-    right: -14em;
-    top: 17.5em;
-    opacity: 0.4;
   }
   /* Top Mobile Navigation */
   .mobile-wrapper {
@@ -545,17 +443,13 @@
     font-size: 1em;
   }
   /* Hidden Elements */
-  .mobile-wrapper,
-  .nav-comb {
+  .mobile-wrapper {
     display: none !important;
   }
   /* Un-Hidden Elements */
   .side-nav a {
     opacity: 1;
     visibility: visible;
-  }
-  .quote-nav-button {
-    display: block;
   }
   .container {
     max-width: 55em;
@@ -735,11 +629,6 @@
   }
 }
 /* Regular Desktop */
-@media screen and (min-width: 1300px) {
-  .side-nav .schedule a {
-    display: block;
-  }
-}
 @media only screen and (min-width: 2000px) {
   body {
     font-size: 1vw;
@@ -851,12 +740,6 @@
   #footer .right-section .buttons {
     display: flex;
     justify-content: center;
-  }
-  #footer .right-section .button-solid {
-    margin: 0;
-    height: 2.94444444em;
-    padding-top: 0.16666667em;
-    width: 13.88888889em;
   }
 }
 /* Tablet */
