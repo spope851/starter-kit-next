@@ -9,6 +9,7 @@ import { DarkModeButton } from './components/DarkModeButton'
 import { Body } from './components/Body'
 import { InternationalizationProvider } from './context/internationalization'
 import { LanguageButton } from './components/LanguageButton'
+import { MobileNavButton } from './components/MobileNavButton'
 
 export const metadata: Metadata = {
   title: 'Title | Business | Location, WA',
@@ -42,12 +43,7 @@ export default function RootLayout({
                                 <Image className="dark" id="mobile-logo" src="/images/logo-white.svg" alt="mobile_company_logo" width="110" height="32"/>
                 
                                 {/* <!-- Hamburger Menu --> */}
-                                {/* onclick="toggleNav()" */}
-                                <button aria-label="open the menu" id="menu-button" className="hamburger hamburger--spring" type="button">
-                                    <span aria-hidden="true" className="hamburger-box">
-                                        <span aria-hidden="true" className="hamburger-inner"></span>
-                                    </span>
-                                </button>
+                                <MobileNavButton active={pathname || "home"} />
                             </div>
                         </div>
                 
