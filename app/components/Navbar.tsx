@@ -1,5 +1,5 @@
 'use client'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -9,11 +9,12 @@ export const Navbar: React.FC = () => {
   })
   const pathname = usePathname().split('/')[1]
   const isActive = (route: string) => pathname === route
+  const router = useRouter()
 
   return (
     <ul id="on-top" className="navbar-links">
       <li className="nav-li">
-        <a id={`${isActive('') && 'active-menu'}`} href="/">
+        <a id={`${isActive('') && 'active-menu'}`} onClick={() => router.push('/')}>
           {t('home')}
         </a>
       </li>
@@ -21,7 +22,7 @@ export const Navbar: React.FC = () => {
         <a
           id={`${isActive('about') && 'active-menu'}`}
           className="link"
-          href="/about"
+          onClick={() => router.push('/about')}
         >
           {t('about')}
         </a>
@@ -30,17 +31,16 @@ export const Navbar: React.FC = () => {
         <a
           id={`${isActive('services') && 'active-menu'}`}
           className="link"
-          href="/#services"
+          onClick={() => router.push('/#services')}
         >
           {t('services')}
         </a>
       </li>
-      {/* <!-- <li className="nav-li"><a className="link" href="html/portfolio">Portfolio</a></li> --> */}
       <li className="nav-li">
         <a
           id={`${isActive('testimonials') && 'active-menu'}`}
           className="link"
-          href="/testimonials"
+          onClick={() => router.push('/testimonials')}
         >
           {t('testimonials')}
         </a>
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
         <a
           id={`${isActive('contact') && 'active-menu'}`}
           className="link"
-          href="/contact"
+          onClick={() => router.push('/contact')}
         >
           {t('contact')}
         </a>
