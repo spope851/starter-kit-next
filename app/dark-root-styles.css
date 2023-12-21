@@ -29,14 +29,22 @@
     content: '';
     position: absolute;
     display: block;
+    height: 1.75em;
+    width: 1.75em;
     background: #fff;
     opacity: 1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border-radius: 50%;
     -webkit-box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
             box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
   }
   .dark-mode-button img {
     display: block;
+    width: 0.75em;
+    height: 0.75em;
     position: absolute;
   }
   .dark-mode-button .moon {
@@ -71,31 +79,6 @@
     opacity: 0;
     visibility: hidden;
   }
-  .dark-mode-group {
-    position: absolute;
-    top: -17em;
-    right: 1em;
-    width: 4em;
-    height: 23.5em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .dark-mode-group p {
-    font-size: .7em !important;
-    text-align: center;
-    color: #fff;
-  }
   .top-dark-mode-button {
     position: absolute;
     top: 2em;
@@ -107,8 +90,8 @@
   }
   .top-lang-button {
     position: absolute;
-    top: 3.2em;
-    right: -2em;
+    top: 4em;
+    right: 0.8em;
     z-index: 1000;
     -webkit-transition: 0.3s ease-in;
     transition: 0.3s ease-in;
@@ -231,7 +214,7 @@
     top: 50%;
     -webkit-transform: translateY(-54%);
             transform: translateY(-54%);
-    right: 0em;
+    right: 1em;
     z-index: 5000;
     height: 1.1em;
     width: 1.1em;
@@ -243,6 +226,28 @@
     display: none;
   }
   .top-dark-mode-button img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .top-lang-button {
+    position: absolute;
+    left: auto;
+    top: 50%;
+    -webkit-transform: translateY(-54%);
+            transform: translateY(-54%);
+    right: -1em;
+    z-index: 5000;
+    height: 1.1em;
+    width: 1.1em;
+  }
+  .top-lang-button:after {
+    color: #000;
+  }
+  .top-lang-button:before {
+    display: none;
+  }
+  .top-lang-button img {
     width: 100%;
     height: 100%;
     display: block;
@@ -285,6 +290,16 @@
     width: 1.6em;
   }
   .top-dark-mode-button img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .top-lang-button {
+    right: 0em;
+    left: auto;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .top-lang-button img {
     width: 1.5em;
     height: 1.5em;
   }

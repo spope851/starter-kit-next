@@ -18,7 +18,7 @@ export default function Home() {
     <Hero component="section" className={styles.hero}>
         <div className={styles.heroContent}>
             <div className={styles.heroText}>
-                <h1>{t("home.main.head")}</h1>
+                <h1>{t("main.head")}</h1>
                 <p>
                     {t("home.main.subHead")}  
                 </p>

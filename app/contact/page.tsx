@@ -1,8 +1,12 @@
+"use client"
 import { Button } from '@mui/material'
 import styles from './page.module.css'
 import { InitHero } from '../components/InitHero'
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
+  const { t } = useTranslation()
+
   return (
     <main id="main">
     
@@ -11,7 +15,7 @@ export default function Home() {
         <!-- ============================================ --> */}
     
         <InitHero className={styles.initHero} component="section">
-            <h1 id="home-h">Contact Business</h1>
+            <h1 id="home-h">{t("head")}</h1>
         </InitHero>
 
 {/* <!-- ============================================ -->

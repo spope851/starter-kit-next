@@ -29,7 +29,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-        <InternationalizationProvider defaultLng={defaultLng}>
+        <InternationalizationProvider defaultLng={defaultLng} nameSpace={pathname || "home"}>
             <ThemeProvider>
                 <Body>
                     <a className="skip" aria-label="skip to main content" href="#main">Click To Skip To Main</a>
