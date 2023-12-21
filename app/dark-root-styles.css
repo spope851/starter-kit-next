@@ -29,22 +29,14 @@
     content: '';
     position: absolute;
     display: block;
-    height: 1.75em;
-    width: 1.75em;
     background: #fff;
     opacity: 1;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     border-radius: 50%;
     -webkit-box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
             box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
   }
   .dark-mode-button img {
     display: block;
-    width: 0.75em;
-    height: 0.75em;
     position: absolute;
   }
   .dark-mode-button .moon {
@@ -56,6 +48,22 @@
     visibility: visible;
   }
   .dark-mode-button .sun {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .th-mode .dark-mode-button .en {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  .th-mode .dark-mode-button .th {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
     -webkit-transition: .3s ease;
@@ -92,6 +100,15 @@
     position: absolute;
     top: 2em;
     right: 0.8em;
+    z-index: 1000;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    z-index: 1001;
+  }
+  .top-lang-button {
+    position: absolute;
+    top: 3.2em;
+    right: -2em;
     z-index: 1000;
     -webkit-transition: 0.3s ease-in;
     transition: 0.3s ease-in;
@@ -137,6 +154,25 @@
     visibility: hidden;
   }
   body.dark-mode .top-dark-mode-button .sun {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  body.dark-mode .top-lang-button:before {
+    background: #000;
+  }
+  .en-mode .top-lang-button .en {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .en-mode .top-lang-button .th {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     -webkit-transition: .3s ease;

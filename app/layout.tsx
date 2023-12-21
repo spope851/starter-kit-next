@@ -7,6 +7,8 @@ import { headers } from 'next/headers'
 import { ThemeProvider } from './context/theme'
 import { DarkModeButton } from './components/DarkModeButton'
 import { Body } from './components/Body'
+import { InternationalizationProvider } from './context/internationalization'
+import { LanguageButton } from './components/LanguageButton'
 
 export const metadata: Metadata = {
   title: 'Title | Business | Location, WA',
@@ -22,102 +24,104 @@ export default function RootLayout({
   // read the custom x-url header
   const pathname = headersList.get('x-url') || "";
   const isActive = (route:string) => pathname === route
+
+  const defaultLng = headersList.get("Accept-Language")
   
   return (
-    <ThemeProvider>
     <html lang="en">
-    <Body>
-    
-        <a className="skip" aria-label="skip to main content" href="#main">Click To Skip To Main</a>
-    
-        <header>
-    
-            {/* <!-- Mobile Nav Strip --> */}
-            <div className="mobile-wrapper">
-                <div className="mobile-nav container mobile-nav-container">
-                    <Image className="light" id="mobile-logo" src="/images/logo.svg" alt="mobile_company_logo" width="110" height="32"/>
-    
-                    <Image className="dark" id="mobile-logo" src="/images/logo-white.svg" alt="mobile_company_logo" width="110" height="32"/>
-    
-                    {/* <!-- Hamburger Menu --> */}
-                    {/* onclick="toggleNav()" */}
-                    <button aria-label="open the menu" id="menu-button" className="hamburger hamburger--spring" type="button">
-                        <span aria-hidden="true" className="hamburger-box">
-                            <span aria-hidden="true" className="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-    
-            {/* <!-- ============================================ -->
-            <!--                   NAVIGATION                 -->
-            <!-- ============================================ --> */}
-    
-            <nav>
-                <div className="navbar-menu">
-                    <div id="side-menu" className=" side-nav">
-                        <a className="nav-logo" href="/">
-                            <Image className="light" aria-hidden="true" decoding="async" src="images/logo.svg" alt="compnay logo" height="80" width={116}/>
-                            <Image className="dark" aria-hidden="true" decoding="async" src="images/logo-white.svg" alt="compnay logo" height="80" width={116}/>
-                        </a>
-                        <ul id="on-top" className="navbar-links">
-                            <li className="nav-li"><a id={`${isActive("") && "active-menu"}`} href="/">Home</a></li>
-                            <li className="nav-li"><a id={`${isActive("about") && "active-menu"}`} className="link" href="/about">About</a></li>
-                            <li className="nav-li"><a id={`${isActive("services") && "active-menu"}`} className="link" href="/#services">Services</a></li>
-                            {/* <!-- <li className="nav-li"><a className="link" href="html/portfolio">Portfolio</a></li> --> */}
-                            <li className="nav-li"><a id={`${isActive("testimonials") && "active-menu"}`} className="link" href="/testimonials">Testimonials</a></li>
-                            <li className="nav-li"><a id={`${isActive("contact") && "active-menu"}`} className="link" href="/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <DarkModeButton/>
-                </div>
-            </nav>
-        </header>
+        <InternationalizationProvider defaultLng={defaultLng}>
+            <ThemeProvider>
+                <Body>
+                    <a className="skip" aria-label="skip to main content" href="#main">Click To Skip To Main</a>
+                    <header>
+                        {/* <!-- Mobile Nav Strip --> */}
+                        <div className="mobile-wrapper">
+                            <div className="mobile-nav container mobile-nav-container">
+                                <Image className="light" id="mobile-logo" src="/images/logo.svg" alt="mobile_company_logo" width="110" height="32"/>
+                
+                                <Image className="dark" id="mobile-logo" src="/images/logo-white.svg" alt="mobile_company_logo" width="110" height="32"/>
+                
+                                {/* <!-- Hamburger Menu --> */}
+                                {/* onclick="toggleNav()" */}
+                                <button aria-label="open the menu" id="menu-button" className="hamburger hamburger--spring" type="button">
+                                    <span aria-hidden="true" className="hamburger-box">
+                                        <span aria-hidden="true" className="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                
+                        {/* <!-- ============================================ -->
+                        <!--                   NAVIGATION                 -->
+                        <!-- ============================================ --> */}
+                
+                        <nav>
+                            <div className="navbar-menu">
+                                <div id="side-menu" className="side-nav">
+                                    <a className="nav-logo" href="/">
+                                        <Image className="light" aria-hidden="true" decoding="async" src="images/logo.svg" alt="compnay logo" height="80" width={116}/>
+                                        <Image className="dark" aria-hidden="true" decoding="async" src="images/logo-white.svg" alt="compnay logo" height="80" width={116}/>
+                                    </a>
+                                    <ul id="on-top" className="navbar-links">
+                                        <li className="nav-li"><a id={`${isActive("") && "active-menu"}`} href="/">Home</a></li>
+                                        <li className="nav-li"><a id={`${isActive("about") && "active-menu"}`} className="link" href="/about">About</a></li>
+                                        <li className="nav-li"><a id={`${isActive("services") && "active-menu"}`} className="link" href="/#services">Services</a></li>
+                                        {/* <!-- <li className="nav-li"><a className="link" href="html/portfolio">Portfolio</a></li> --> */}
+                                        <li className="nav-li"><a id={`${isActive("testimonials") && "active-menu"}`} className="link" href="/testimonials">Testimonials</a></li>
+                                        <li className="nav-li"><a id={`${isActive("contact") && "active-menu"}`} className="link" href="/contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <DarkModeButton/>
+                                <LanguageButton/>
+                            </div>
+                        </nav>
+                    </header>
         
-        {children}
+                    {children}
 
 {/* <!-- ============================================ -->
 <!--                     FOOTER                   -->
 <!-- ============================================ --> */}
 
-<footer id="footer">
-    <div className="container">
-        <div className="left-section">
-            <a className="logo" href="/"><Image loading="lazy" decoding="async" src="/images/logo-white.svg" alt="logo" width="293" height="91"/></a>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia sequi placeat dignissimos adipisci explicabo excepturi a beatae architecto autem.  
-            </p>
-        </div>
-        <div className="right-section">
-            <div className="lists">
-                <ul>
-                    <li><h2>Company</h2></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Services</a></li>
-                </ul>
-                <ul>
-                    <li><h2>Support</h2></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-                <ul>
-                    <li><h2>Get in Touch</h2></li>
-                    <li><Image loading="lazy" decoding="async" src="/images/pin.svg" alt="" width="24" height="24"/><a href="" target="_blank">Somewhere, Tx</a></li>
-                    <li><Image loading="lazy" decoding="async" src="/images/footer-phone.svg" alt="" width="24" height="24"/><a href="tel:555-213-9120">(555) 213-9120</a></li>
-                    <li><Image loading="lazy" decoding="async" src="/images/email.svg" alt="" width="24" height="24"/><a href="mailto:info@email.com">info@email.com</a></li>
-                </ul>
-            </div>
+                    <footer id="footer">
+                        <div className="container">
+                            <div className="left-section">
+                                <a className="logo" href="/"><Image loading="lazy" decoding="async" src="/images/logo-white.svg" alt="logo" width="293" height="91"/></a>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia sequi placeat dignissimos adipisci explicabo excepturi a beatae architecto autem.  
+                                </p>
+                            </div>
+                            <div className="right-section">
+                                <div className="lists">
+                                    <ul>
+                                        <li><h2>Company</h2></li>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/about">About Us</a></li>
+                                        <li><a href="/contact">Services</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><h2>Support</h2></li>
+                                        <li><a href="/contact">Contact Us</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><h2>Get in Touch</h2></li>
+                                        <li><Image loading="lazy" decoding="async" src="/images/pin.svg" alt="" width="24" height="24"/><a href="" target="_blank">Somewhere, Tx</a></li>
+                                        <li><Image loading="lazy" decoding="async" src="/images/footer-phone.svg" alt="" width="24" height="24"/><a href="tel:555-213-9120">(555) 213-9120</a></li>
+                                        <li><Image loading="lazy" decoding="async" src="/images/email.svg" alt="" width="24" height="24"/><a href="mailto:info@email.com">info@email.com</a></li>
+                                    </ul>
+                                </div>
 
-            <div className="buttons">
-                <a className="button-solid" href="/contact" >
-                    Call to action button
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-</Body>
+                                <div className="buttons">
+                                    <a className="button-solid" href="/contact" >
+                                        Call to action button
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </Body>
+            </ThemeProvider>
+        </InternationalizationProvider>
     </html>
-    </ThemeProvider>
   )
 }

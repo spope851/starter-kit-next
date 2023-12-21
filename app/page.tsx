@@ -1,9 +1,13 @@
+"use client"
 import styles from './page.module.css'
-import { Box, Button } from '@mui/material'
+import { Button } from '@mui/material'
 import { Hero } from './components/Hero'
 import { CallNow } from './components/CallNow'
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
+  const { t } = useTranslation()
+
   return (
     <main className={styles.main} id='main'>
     
@@ -14,9 +18,9 @@ export default function Home() {
     <Hero component="section" className={styles.hero}>
         <div className={styles.heroContent}>
             <div className={styles.heroText}>
-                <h1>Main headline, put top keyword here</h1>
+                <h1>{t("home.main.head")}</h1>
                 <p>
-                    Expand on the keyword with more keywords and add a list of related services that you do and include the city, state of your service area.  
+                    {t("home.main.subHead")}  
                 </p>
                 <div className={styles.buttons}>
                     <a className="button-solid" href="/about"
