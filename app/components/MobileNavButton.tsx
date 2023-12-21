@@ -1,6 +1,6 @@
 "use client";
 import { Button, Drawer, styled } from "@mui/material";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -14,8 +14,9 @@ const Route = styled(Button)`
   }
 `
 
-export const MobileNavButton: React.FC<{active: string}> = ({ active }) => {
+export const MobileNavButton: React.FC = () => {
     const router = useRouter()
+    const active = usePathname().split("/").at(-1) || "home"
     const [open, setOpen] = useState(false)
     const { t } = useTranslation("global", {
       keyPrefix: "nav"

@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 import parser from 'accept-language-parser'
 import en from '@/app/data/i18n/en.json'
 import th from '@/app/data/i18n/th.json'
+import { usePathname } from "next/navigation";
 
 type SupportedLanguages = 'en' | 'th'
 
@@ -16,9 +17,10 @@ type InternationalizatinContextProps = {
 
 export const InternationalizatinContext = createContext({} as InternationalizatinContextProps)
 
-export const InternationalizationProvider: React.FC<{ children: ReactNode, defaultLng: string | null, nameSpace: string }> = ({ children, defaultLng, nameSpace: ns }) => {
+export const InternationalizationProvider: React.FC<{ children: ReactNode, defaultLng: string | null }> = ({ children, defaultLng }) => {
     const supportedLng = parser.pick(SUPPORTED_LANGUAGES, String(defaultLng))
     const language = useState(supportedLng)
+    const ns = usePathname().split("/").at(-1) || "home"
     
     useMemo(() => i18n.use(initReactI18next).init({
         debug: process.env.NODE_ENV === "development",

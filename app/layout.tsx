@@ -24,12 +24,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const headersList = headers();
-  const pathname = headersList.get('x-url') || "";
   const defaultLng = headersList.get("Accept-Language")
   
   return (
     <html lang="en">
-        <InternationalizationProvider defaultLng={defaultLng} nameSpace={pathname || "home"}>
+        <InternationalizationProvider defaultLng={defaultLng}>
             <ThemeProvider>
                 <Body>
                     <a className="skip" aria-label="skip to main content" href="#main">Click To Skip To Main</a>
@@ -42,7 +41,7 @@ export default function RootLayout({
                                 <Image className="dark" id="mobile-logo" src="/images/logo-white.svg" alt="mobile_company_logo" width="110" height="32"/>
                 
                                 {/* <!-- Hamburger Menu --> */}
-                                <MobileNavButton active={pathname || "home"} />
+                                <MobileNavButton />
                             </div>
                         </div>
                 
