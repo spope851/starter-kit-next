@@ -2,6 +2,7 @@
 import { Button, Drawer, styled } from "@mui/material";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const TABS = ["home", "about", "services", "testimonials", "contact"]
 
@@ -16,6 +17,9 @@ const Route = styled(Button)`
 export const MobileNavButton: React.FC<{active: string}> = ({ active }) => {
     const router = useRouter()
     const [open, setOpen] = useState(false)
+    const { t } = useTranslation("global", {
+      keyPrefix: "nav"
+  })
 
     const route = (r: string): void => {
       setOpen(false)
@@ -44,7 +48,7 @@ export const MobileNavButton: React.FC<{active: string}> = ({ active }) => {
                     else route(`/${tab}`)}
                 }
               >
-                {tab}
+                {t(tab)}
               </Route>
             ))}
           </Drawer>

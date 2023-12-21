@@ -13,5 +13,19 @@
     },
     "testimonials": {
         "head": "ข้อความรับรอง"
+    },
+    "global": {
+        "nav": {
+            "home": "บ้าน",
+            "about": "เกี่ยวกับ",
+            "services": "บริการ",
+            "testimonials": "ข้อความรับรอง",
+            "contact": "ติดต่อ"
+        },
+        "footer": {
+            "company": "บริษัท",
+            "support": "สนับสนุน",
+            "contact": "ได้รับการติดต่อ"
+        }
     }
 }

@@ -10,6 +10,8 @@ import { Body } from './components/Body'
 import { InternationalizationProvider } from './context/internationalization'
 import { LanguageButton } from './components/LanguageButton'
 import { MobileNavButton } from './components/MobileNavButton'
+import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'Title | Business | Location, WA',
@@ -22,10 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const headersList = headers();
-  // read the custom x-url header
   const pathname = headersList.get('x-url') || "";
-  const isActive = (route:string) => pathname === route
-
   const defaultLng = headersList.get("Accept-Language")
   
   return (
@@ -58,14 +57,7 @@ export default function RootLayout({
                                         <Image className="light" aria-hidden="true" decoding="async" src="images/logo.svg" alt="compnay logo" height="80" width={116}/>
                                         <Image className="dark" aria-hidden="true" decoding="async" src="images/logo-white.svg" alt="compnay logo" height="80" width={116}/>
                                     </a>
-                                    <ul id="on-top" className="navbar-links">
-                                        <li className="nav-li"><a id={`${isActive("") && "active-menu"}`} href="/">Home</a></li>
-                                        <li className="nav-li"><a id={`${isActive("about") && "active-menu"}`} className="link" href="/about">About</a></li>
-                                        <li className="nav-li"><a id={`${isActive("services") && "active-menu"}`} className="link" href="/#services">Services</a></li>
-                                        {/* <!-- <li className="nav-li"><a className="link" href="html/portfolio">Portfolio</a></li> --> */}
-                                        <li className="nav-li"><a id={`${isActive("testimonials") && "active-menu"}`} className="link" href="/testimonials">Testimonials</a></li>
-                                        <li className="nav-li"><a id={`${isActive("contact") && "active-menu"}`} className="link" href="/contact">Contact</a></li>
-                                    </ul>
+                                    <Navbar />
                                 </div>
                                 <DarkModeButton/>
                                 <LanguageButton/>
@@ -79,42 +71,7 @@ export default function RootLayout({
 <!--                     FOOTER                   -->
 <!-- ============================================ --> */}
 
-                    <footer id="footer">
-                        <div className="container">
-                            <div className="left-section">
-                                <a className="logo" href="/"><Image loading="lazy" decoding="async" src="/images/logo-white.svg" alt="logo" width="293" height="91"/></a>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia sequi placeat dignissimos adipisci explicabo excepturi a beatae architecto autem.  
-                                </p>
-                            </div>
-                            <div className="right-section">
-                                <div className="lists">
-                                    <ul>
-                                        <li><h2>Company</h2></li>
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="/about">About Us</a></li>
-                                        <li><a href="/contact">Services</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><h2>Support</h2></li>
-                                        <li><a href="/contact">Contact Us</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><h2>Get in Touch</h2></li>
-                                        <li><Image loading="lazy" decoding="async" src="/images/pin.svg" alt="" width="24" height="24"/><a href="" target="_blank">Somewhere, Tx</a></li>
-                                        <li><Image loading="lazy" decoding="async" src="/images/footer-phone.svg" alt="" width="24" height="24"/><a href="tel:555-213-9120">(555) 213-9120</a></li>
-                                        <li><Image loading="lazy" decoding="async" src="/images/email.svg" alt="" width="24" height="24"/><a href="mailto:info@email.com">info@email.com</a></li>
-                                    </ul>
-                                </div>
-
-                                <div className="buttons">
-                                    <a className="button-solid" href="/contact" >
-                                        Call to action button
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                   <Footer /> 
                 </Body>
             </ThemeProvider>
         </InternationalizationProvider>

@@ -13,5 +13,19 @@
     },
     "testimonials": {
         "head": "Testimonials"
+    },
+    "global": {
+        "nav": {
+            "home": "Home",
+            "about": "About",
+            "services": "Services",
+            "testimonials": "Testimonials",
+            "contact": "Contact"
+        },
+        "footer": {
+            "company": "Company",
+            "support": "Support",
+            "contact": "Get in Touch"
+        }
     }
 }

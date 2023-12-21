@@ -20,7 +20,7 @@ export default function Home() {
             <div className={styles.heroText}>
                 <h1>{t("main.head")}</h1>
                 <p>
-                    {t("home.main.subHead")}  
+                    {t("main.subHead")}  
                 </p>
                 <div className={styles.buttons}>
                     <a className="button-solid" href="/about"
