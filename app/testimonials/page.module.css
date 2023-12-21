@@ -22,7 +22,7 @@
     height: 100%;
     width: 100%;
     background: #000;
-    opacity: .5;
+    opacity: 0.5;
     top: 0;
     left: 0;
     z-index: -1;
@@ -42,7 +42,7 @@
     width: 40%;
     background: transparent;
     border: 0.15625em solid var(--primary);
-    opacity: .5;
+    opacity: 0.5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,7 +135,7 @@
     width: 2.22222222em;
     border-radius: 50%;
     background: var(--primary);
-    opacity: .2;
+    opacity: 0.2;
     z-index: -1;
   }
 }

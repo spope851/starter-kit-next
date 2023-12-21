@@ -1,16 +1,16 @@
 /* Pages */
 @media screen and (min-width: 0px) {
   /* body.dark-mode { */
-    /*-- -------------------------- -->
+  /*-- -------------------------- -->
         <---           Home             -->
         <--- -------------------------- -*/
-    /*-- -------------------------- -->
+  /*-- -------------------------- -->
         <---           About            -->
         <--- -------------------------- -*/
-    /*-- -------------------------- -->
+  /*-- -------------------------- -->
         <---          Contact           -->
         <--- -------------------------- -*/
-    /*-- -------------------------- -->
+  /*-- -------------------------- -->
         <---        Testimonials        -->
         <--- -------------------------- -*/
   /* } */
@@ -24,7 +24,7 @@
     height: 100%;
     width: 100%;
     background: #000;
-    opacity: .7;
+    opacity: 0.7;
     top: 0;
     left: 0;
   }
@@ -66,17 +66,18 @@
   }
   body.dark-mode .about .left-section:before {
     background: var(--shade);
-    opacity: .1;
+    opacity: 0.1;
   }
   body.dark-mode .about .right-section .topper {
     color: var(--shade);
   }
-  body.dark-mode .about .right-section h2, body.dark-mode #aboutHeadline {
+  body.dark-mode .about .right-section h2,
+  body.dark-mode #aboutHeadline {
     color: #fff;
   }
   body.dark-mode .about .right-section h2:before {
     background: var(--shade);
-    opacity: .1;
+    opacity: 0.1;
   }
   body.dark-mode .about .right-section h2 span {
     color: var(--shade);
@@ -95,7 +96,7 @@
   }
   body.dark-mode #how-we-know .left-section ul li {
     color: #fff;
-    opacity: .9;
+    opacity: 0.9;
   }
   body.dark-mode #how-we-know .right-section {
     background: var(--darkPrimary);
@@ -161,7 +162,7 @@
     background: var(--tint);
   }
   body.dark-mode .initHero {
-    background: url("/images/about-dark.jpg");
+    background: url('/images/about-dark.jpg');
     background-size: cover;
     background-position: center 80%;
     background-repeat: no-repeat;
@@ -175,7 +176,7 @@
   }
   body.dark-mode .aboutContent .content h2:before {
     background: var(--shade);
-    opacity: .1;
+    opacity: 0.1;
   }
   body.dark-mode .aboutContent .content h2 span {
     color: var(--shade);
@@ -188,7 +189,7 @@
   }
   body.dark-mode .staff .member .title {
     color: #fff;
-    opacity: .7;
+    opacity: 0.7;
   }
   body.dark-mode .form .topper {
     color: var(--shade);
@@ -200,12 +201,14 @@
     color: #fff;
   }
   body.dark-mode #contact ::placeholder {
-    opacity: .3;
+    opacity: 0.3;
   }
   body.dark-mode .form .contact-right {
     background: var(--tint);
   }
-  body.dark-mode .reviews .name, body.dark-mode #contact label, body.dark-mode #testimonialName {
+  body.dark-mode .reviews .name,
+  body.dark-mode #contact label,
+  body.dark-mode #testimonialName {
     color: #fff;
   }
 }

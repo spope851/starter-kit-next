@@ -22,7 +22,7 @@
     height: 100%;
     width: 100%;
     background: #000;
-    opacity: .5;
+    opacity: 0.5;
     top: 0;
     left: 0;
     z-index: -1;
@@ -42,7 +42,7 @@
     width: 40%;
     background: transparent;
     border: 0.15625em solid var(--primary);
-    opacity: .5;
+    opacity: 0.5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -84,7 +84,7 @@
     font-size: 0.7em;
     line-height: 1.35714286;
     color: var(--primary);
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     margin-bottom: 0.42857143em;
     display: block;
     text-transform: uppercase;
@@ -117,10 +117,10 @@
     font-size: 0.8em;
     margin-bottom: 0.375em;
   }
-  .form .contact .inputGroup input[type="text"],
-  .form .contact .inputGroup input[type="email"],
-  .form .contact .inputGroup input[type="tel"],
-  .form .contact .inputGroup input[type="url"],
+  .form .contact .inputGroup input[type='text'],
+  .form .contact .inputGroup input[type='email'],
+  .form .contact .inputGroup input[type='tel'],
+  .form .contact .inputGroup input[type='url'],
   .form .contact .inputGroup textarea {
     height: 3.35em;
     border: none;
@@ -135,7 +135,7 @@
   }
   .form .contact .inputGroup ::placeholder {
     color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   .form .contact .button-solid {
     border: none;
@@ -168,7 +168,7 @@
     font-size: 0.8em;
     line-height: 1.75;
     color: #fff;
-    opacity: .9;
+    opacity: 0.9;
     text-decoration: none;
     display: block;
   }
@@ -216,21 +216,21 @@
     border: 0.05em solid var(--primary);
     pointer-events: none;
   }
-  .form .contact .inputGroup:hover input[type="text"],
-  .form .contact .inputGroup:hover input[type="email"],
-  .form .contact .inputGroup:hover input[type="tel"],
-  .form .contact .inputGroup:hover input[type="url"],
+  .form .contact .inputGroup:hover input[type='text'],
+  .form .contact .inputGroup:hover input[type='email'],
+  .form .contact .inputGroup:hover input[type='tel'],
+  .form .contact .inputGroup:hover input[type='url'],
   .form .contact .inputGroup:hover textarea {
     padding-left: 1em;
   }
-  .form .contact .inputGroup input[type="text"],
-  .form .contact .inputGroup input[type="email"],
-  .form .contact .inputGroup input[type="tel"],
-  .form .contact .inputGroup input[type="url"],
+  .form .contact .inputGroup input[type='text'],
+  .form .contact .inputGroup input[type='email'],
+  .form .contact .inputGroup input[type='tel'],
+  .form .contact .inputGroup input[type='url'],
   .form .contact .inputGroup textarea {
     border-bottom: none;
     position: relative;
-    transition: padding .3s;
+    transition: padding 0.3s;
     background: transparent;
   }
   .form .contact .inputGroup .hoverBox {
@@ -244,7 +244,9 @@
     bottom: -0.05em;
     left: 0;
     z-index: 10;
-    transition: height .3s, border .3s;
+    transition:
+      height 0.3s,
+      border 0.3s;
     z-index: -1;
   }
   .form .contact .inputGroupTextarea:hover .hoverBox {

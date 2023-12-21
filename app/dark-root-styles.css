@@ -19,11 +19,11 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .dark-mode-button:before {
     content: '';
@@ -36,10 +36,10 @@
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     -webkit-box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
-            box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
+    box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
   }
   .dark-mode-button img {
     display: block;
@@ -49,33 +49,33 @@
   }
   .dark-mode-button .moon {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(0px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 1;
     visibility: visible;
   }
   .dark-mode-button .sun {
     -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(30px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 0;
     visibility: hidden;
   }
   .th-mode .dark-mode-button .en {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(0px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 1;
     visibility: visible;
   }
   .th-mode .dark-mode-button .th {
     -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(30px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 0;
     visibility: hidden;
   }
@@ -116,11 +116,12 @@
   body.dark-mode h2,
   body.dark-mode p {
     color: #fff;
-    opacity: .9;
+    opacity: 0.9;
   }
-  body.dark-mode p, body.dark-mode h1 {
+  body.dark-mode p,
+  body.dark-mode h1 {
     color: #fff !important;
-    opacity: .9;
+    opacity: 0.9;
   }
   body.dark-mode h3 {
     color: var(--primary);
@@ -130,17 +131,17 @@
   }
   body.dark-mode .top-dark-mode-button .moon {
     -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(-30px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 0;
     visibility: hidden;
   }
   body.dark-mode .top-dark-mode-button .sun {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(0);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 1;
     visibility: visible;
   }
@@ -149,17 +150,17 @@
   }
   .en-mode .top-lang-button .en {
     -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(-30px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 0;
     visibility: hidden;
   }
   .en-mode .top-lang-button .th {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    transform: translateY(0);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 1;
     visibility: visible;
   }
@@ -178,8 +179,8 @@
   body.dark-mode .hamburger-inner::before,
   body.dark-mode .hamburger-inner::after {
     background: #fff;
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   body.dark-mode .hamburger-inner {
     background: #fff;
@@ -213,7 +214,7 @@
     left: auto;
     top: 50%;
     -webkit-transform: translateY(-54%);
-            transform: translateY(-54%);
+    transform: translateY(-54%);
     right: 1em;
     z-index: 5000;
     height: 1.1em;
@@ -235,7 +236,7 @@
     left: auto;
     top: 50%;
     -webkit-transform: translateY(-54%);
-            transform: translateY(-54%);
+    transform: translateY(-54%);
     right: -1em;
     z-index: 5000;
     height: 1.1em;
@@ -255,7 +256,7 @@
   body.dark-mode:before {
     background: var(--dark);
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
-            box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
   }
   body.dark-mode .navbar-menu img {
     display: block;

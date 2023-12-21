@@ -1,31 +1,31 @@
 {
-    "home": {
-        "main": {
-            "head": "Main headline, put top keyword here",
-            "subHead": "Expand on the keyword with more keywords and add a list of related services that you do and include the city, state of your service area."
-        }
-    },
-    "about": {
-        "head": "About Company"
-    },
-    "contact": {
-        "head": "Contact Business"
-    },
-    "testimonials": {
-        "head": "Testimonials"
-    },
-    "global": {
-        "nav": {
-            "home": "Home",
-            "about": "About",
-            "services": "Services",
-            "testimonials": "Testimonials",
-            "contact": "Contact"
-        },
-        "footer": {
-            "company": "Company",
-            "support": "Support",
-            "contact": "Get in Touch"
-        }
+  "home": {
+    "main": {
+      "head": "Main headline, put top keyword here",
+      "subHead": "Expand on the keyword with more keywords and add a list of related services that you do and include the city, state of your service area."
     }
+  },
+  "about": {
+    "head": "About Company"
+  },
+  "contact": {
+    "head": "Contact Business"
+  },
+  "testimonials": {
+    "head": "Testimonials"
+  },
+  "global": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "footer": {
+      "company": "Company",
+      "support": "Support",
+      "contact": "Get in Touch"
+    }
+  }
 }

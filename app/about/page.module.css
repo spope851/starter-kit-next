@@ -22,7 +22,7 @@
     height: 100%;
     width: 100%;
     background: #000;
-    opacity: .5;
+    opacity: 0.5;
     top: 0;
     left: 0;
     z-index: -1;
@@ -42,7 +42,7 @@
     width: 50%;
     background: transparent;
     border: 0.15625em solid var(--primary);
-    opacity: .5;
+    opacity: 0.5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -99,7 +99,7 @@
     font-size: 0.7em;
     line-height: 1.35714286;
     color: var(--primary);
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     margin-bottom: 0.42857143em;
     display: block;
     text-transform: uppercase;
@@ -120,7 +120,7 @@
     height: 4.16666667em;
     width: 4.16666667em;
     background: var(--primary);
-    opacity: .05;
+    opacity: 0.05;
     top: -1.38888889em;
     left: -1.38888889em;
     z-index: -1;
@@ -190,7 +190,7 @@
     font-size: 0.7em;
     line-height: 1.35714286;
     color: #0e817c;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     margin-bottom: 0.42857143em;
     display: block;
     text-transform: uppercase;
@@ -213,7 +213,7 @@
     height: 3.57142857em;
     width: 3.57142857em;
     background: var(--primary);
-    opacity: .05;
+    opacity: 0.05;
     top: -1.19047619em;
     left: 50%;
     transform: translateX(-50%);
@@ -262,7 +262,7 @@
     font-size: 0.8em;
     line-height: 1.6875;
     text-transform: uppercase;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #595959;
     margin-bottom: 1.5em;
     display: block;
@@ -299,4 +299,3 @@
 
 /* Small Desktop */
 /* Large Desktop */
-
