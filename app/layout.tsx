@@ -5,10 +5,8 @@ import './dark-root-styles.css'
 import Image from 'next/image'
 import { headers } from 'next/headers'
 import { ThemeProvider } from './context/theme'
-import { DarkModeButton } from './components/DarkModeButton'
 import { Body } from './components/Body'
 import { InternationalizationProvider } from './context/internationalization'
-import { LanguageButton } from './components/LanguageButton'
 import { MobileNavButton } from './components/MobileNavButton'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
@@ -27,9 +25,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <InternationalizationProvider defaultLng={defaultLng}>
         <ThemeProvider>
           <Body>
-            <a className="skip" aria-label="skip to main content" href="#main">
-              Click To Skip To Main
-            </a>
             <header>
               {/* <!-- Mobile Nav Strip --> */}
               <div className="mobile-wrapper">
@@ -42,7 +37,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     width="110"
                     height="32"
                   />
-
                   <Image
                     className="dark"
                     id="mobile-logo"
@@ -51,52 +45,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     width="110"
                     height="32"
                   />
-
                   {/* <!-- Hamburger Menu --> */}
                   <MobileNavButton />
                 </div>
               </div>
-
-              {/* <!-- ============================================ -->
-                        <!--                   NAVIGATION                 -->
-                        <!-- ============================================ --> */}
-
-              <nav>
-                <div className="navbar-menu">
-                  <div id="side-menu" className="side-nav">
-                    <a className="nav-logo" href="/">
-                      <Image
-                        className="light"
-                        aria-hidden="true"
-                        decoding="async"
-                        src="images/logo.svg"
-                        alt="compnay logo"
-                        height="80"
-                        width={116}
-                      />
-                      <Image
-                        className="dark"
-                        aria-hidden="true"
-                        decoding="async"
-                        src="images/logo-white.svg"
-                        alt="compnay logo"
-                        height="80"
-                        width={116}
-                      />
-                    </a>
-                    <Navbar />
-                  </div>
-                  <DarkModeButton />
-                  <LanguageButton />
-                </div>
-              </nav>
+              <Navbar />
             </header>
 
             {children}
-
-            {/* <!-- ============================================ -->
-<!--                     FOOTER                   -->
-<!-- ============================================ --> */}
 
             <Footer />
           </Body>

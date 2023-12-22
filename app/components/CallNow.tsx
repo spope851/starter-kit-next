@@ -1,18 +1,46 @@
 'use client'
-import { Box, BoxProps, useTheme } from '@mui/material'
+import { Box, styled, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
-import styles from '../page.module.css'
 
-export const CallNow: React.FC<BoxProps> = ({ className }) => {
+const StyledImage = styled(Image)({
+  display: 'inline-block',
+  width: '1.16666667em',
+  height: '1.16666667em',
+})
+
+export const CallNow: React.FC = () => {
   const theme = useTheme()
-  const TEXT_SX = {
+  const SHARED_SX = {
     color: theme.palette.mode === 'light' ? '#000' : '#fff',
+    display: 'block',
+    lineHeight: 1.16666667,
+  }
+  const TEXT_SX = {
+    ...SHARED_SX,
+    fontSize: '0.6em',
+    textTransform: 'uppercase',
+    marginBottom: '0.5em',
+  }
+  const NUMBER_SX = {
+    ...SHARED_SX,
+    fontWeight: 'bold',
+    fontSize: '1em',
+  }
+  const WRAPPER_SX = {
+    height: '2.94444444em',
+    width: '9.11111111em',
+    fontSize: '0.9em',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    textDecoration: 'none',
+    margin: 0,
   }
 
   return (
-    <Box className={className} component="a" href="tel:555-213-9120">
-      <Image
+    <Box component="a" href="tel:555-213-9120" sx={WRAPPER_SX}>
+      <StyledImage
         decoding="async"
         src={
           theme.palette.mode === 'light'
@@ -24,11 +52,11 @@ export const CallNow: React.FC<BoxProps> = ({ className }) => {
         width="21"
         height="21"
       />
-      <div className={styles.group}>
-        <Box component="span" className={styles.text} sx={TEXT_SX}>
+      <div>
+        <Box component="span" sx={TEXT_SX}>
           Call Now
         </Box>
-        <Box component="span" className={styles.number} sx={TEXT_SX}>
+        <Box component="span" sx={NUMBER_SX}>
           (555) 213-9120
         </Box>
       </div>

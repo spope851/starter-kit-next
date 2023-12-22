@@ -9,11 +9,7 @@ export default function Home() {
 
   return (
     <main id="main">
-      {/* <!-- ============================================ -->
-          <!--                    LANDING                   -->
-          <!-- ============================================ --> */}
-
-      <InitHero className={styles.initHero} component="section">
+      <InitHero component="section">
         <h1 id="home-h">{t('head')}</h1>
       </InitHero>
 

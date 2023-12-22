@@ -32,6 +32,15 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         palette: {
           mode: darkMode === 'enable' ? 'dark' : 'light',
         },
+        breakpoints: {
+          values: {
+            xs: 0,
+            sm: 600,
+            lg: 1200,
+            md: 1024,
+            xl: 1536,
+          },
+        },
         components: {
           MuiButton: {
             defaultProps: {

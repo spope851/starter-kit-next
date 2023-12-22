@@ -1,48 +1,5 @@
 /* Pages */
 @media screen and (min-width: 0px) {
-  /* body.dark-mode { */
-  /*-- -------------------------- -->
-        <---           Home             -->
-        <--- -------------------------- -*/
-  /*-- -------------------------- -->
-        <---           About            -->
-        <--- -------------------------- -*/
-  /*-- -------------------------- -->
-        <---          Contact           -->
-        <--- -------------------------- -*/
-  /*-- -------------------------- -->
-        <---        Testimonials        -->
-        <--- -------------------------- -*/
-  /* } */
-  body.dark-mode .hero {
-    position: relative;
-  }
-  body.dark-mode .hero:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-  }
-  body.dark-mode .hero h1 {
-    color: #fff;
-  }
-  body.dark-mode .hero .callNow .light {
-    display: none;
-  }
-  body.dark-mode .hero .callNow .dark {
-    display: inline-block;
-  }
-  body.dark-mode .hero .callNow .text {
-    color: #fff;
-  }
-  body.dark-mode .hero .callNow .number {
-    color: #fff;
-  }
   body.dark-mode .services .service {
     background: var(--darkPrimary);
   }
@@ -73,37 +30,6 @@
   body.dark-mode .about .right-section .decoration .line {
     background: var(--shade);
   }
-  body.dark-mode #how-we-know {
-    box-shadow: none;
-  }
-  body.dark-mode #how-we-know .left-section {
-    background: var(--medium);
-  }
-  body.dark-mode #how-we-know .left-section ul li {
-    color: #fff;
-    opacity: 0.9;
-  }
-  body.dark-mode #how-we-know .right-section {
-    background: var(--darkPrimary);
-  }
-  body.dark-mode #get-started .topper {
-    color: var(--shade);
-  }
-  body.dark-mode #get-started .steps .step .image-group {
-    background: #262626;
-  }
-  body.dark-mode #get-started .steps .number {
-    border: 0.34615385em solid var(--dark);
-  }
-  body.dark-mode #get-started .steps h3 {
-    color: #fff;
-  }
-  body.dark-mode #get-started .steps .dots .dot {
-    background: var(--shade);
-  }
-  body.dark-mode #get-started .steps .dots .dot:nth-of-type(5) {
-    background: var(--primary) !important;
-  }
   body.dark-mode .reviews .topper {
     color: var(--shade);
   }
@@ -113,24 +39,8 @@
   body.dark-mode .reviews .right-section .review {
     background: var(--tint);
   }
-  body.dark-mode .reviews .right-section .identity .light {
-    display: none;
-  }
-  body.dark-mode .reviews .right-section .identity .dark {
-    display: inline-block;
-  }
-  body.dark-mode .reviews .right-section .identity .name {
-    color: #fff;
-  }
   body.dark-mode #footer {
     background: #0e0d0d;
-  }
-  body.dark-mode .initHero {
-    background: url('/images/about-dark.jpg');
-    background-size: cover;
-    background-position: center 80%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   body.dark-mode .aboutContent .content .topper {
     color: var(--shade);
@@ -174,11 +84,5 @@
   body.dark-mode #contact label,
   body.dark-mode #testimonialName {
     color: #fff;
-  }
-}
-/* Desktop */
-@media screen and (min-width: 1024px) {
-  body.dark-mode #how-we-know {
-    background: var(--darkPrimary);
   }
 }

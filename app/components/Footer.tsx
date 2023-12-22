@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
     <footer id="footer">
       <div className="container">
         <div className="left-section">
-          <a className="logo" href="/">
+          <a className="logo" onClick={() => router.push('/')}>
             <Image
               loading="lazy"
               decoding="async"
@@ -38,13 +38,13 @@ export const Footer: React.FC = () => {
                 <h2>{t('company')}</h2>
               </li>
               <li>
-                <a href="/">Home</a>
+                <a onClick={() => router.push('/')}>Home</a>
               </li>
               <li>
-                <a href="/about">About Us</a>
+                <a onClick={() => router.push('/about')}>About Us</a>
               </li>
               <li>
-                <a href="/contact">Services</a>
+                <a onClick={() => router.push('/contact')}>Services</a>
               </li>
             </ul>
             <ul>
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
                 <h2>{t('support')}</h2>
               </li>
               <li>
-                <a href="/contact">Contact Us</a>
+                <a onClick={() => router.push('/contact')}>Contact Us</a>
               </li>
             </ul>
             <ul>
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                   width="24"
                   height="24"
                 />
-                <a href="" target="_blank">
+                <a onClick={() => router.push('/contact')} target="_blank">
                   Somewhere, Tx
                 </a>
               </li>
