@@ -19,6 +19,7 @@ export const InitHero = styled(Box)(({ theme }) => {
       textAlign: 'center',
       margin: 0,
       position: 'relative',
+      opacity: 0.9,
       ':before': {
         content: "''",
         position: 'absolute',
