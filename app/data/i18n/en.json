@@ -2,14 +2,55 @@
   "home": {
     "main": {
       "head": "Main headline, put top keyword here",
-      "subHead": "Expand on the keyword with more keywords and add a list of related services that you do and include the city, state of your service area."
+      "subHead": "Expand on the keyword with more keywords and add a list of related services that you do and include the city, state of your service area.",
+      "call": "CALL NOW",
+      "phone": "(555) 213-9120"
+    },
+    "services": {
+      "left": {
+        "title": "This is a main service you do",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio dui, fermentum id augue."
+      },
+      "center": {
+        "title": "This is THE main service you do",
+        "subtitle": "Notice how this one is bigger and darker, this is your main service you provide."
+      },
+      "right": {
+        "title": "This is a main service you do",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio dui, fermentum id augue."
+      }
     }
   },
   "about": {
     "head": "About Company"
   },
   "contact": {
-    "head": "Contact Business"
+    "head": "Contact Business",
+    "main": {
+      "businessName": "Business Name",
+      "title": "Send a Message",
+      "subtitle": "If you have any questions or concerns please feel free to reach out to us. we respond to every call and email.",
+      "form": {
+        "name": { "label": "Full Name", "placeholder": "Full Name" },
+        "email": { "label": "Email", "placeholder": "Email Address" },
+        "phone": { "label": "Phone", "placeholder": "Phone Number" },
+        "location": { "label": "Location", "placeholder": "Your Location" },
+        "question": {
+          "label": "How did you hear about us?",
+          "placeholder": "How did you hear about us"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us about what you need help with"
+        }
+      },
+      "aside": {
+        "location": { "label": "Location", "value": "Fort Collins, CO" },
+        "phone": { "label": "Phone", "value": "(555) 213-9120" },
+        "email": { "label": "Email", "value": "info@email.com" },
+        "hours": { "label": "Hours", "value": "Mon to Sat: 9am to 7pm" }
+      }
+    }
   },
   "testimonials": {
     "head": "Testimonials"
@@ -23,9 +64,21 @@
       "contact": "Contact"
     },
     "footer": {
-      "company": "Company",
-      "support": "Support",
-      "contact": "Get in Touch"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia sequi placeat dignissimos adipisci explicabo excepturi a beatae architecto autem.",
+      "helpLinks": {
+        "company": {
+          "title": "Company",
+          "home": "Home"
+        },
+        "support": { "title": "Support", "contact": "Contact Us" },
+        "contact": {
+          "title": "Get in Touch",
+          "location": "Fort Collins, CO",
+          "phone": "(555) 213-9120",
+          "email": "info@email.com"
+        }
+      },
+      "callToAction": "Call to action button"
     }
   }
 }

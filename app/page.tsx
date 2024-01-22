@@ -1,6 +1,6 @@
 'use client'
 import styles from './page.module.css'
-import { Box, Button, styled } from '@mui/material'
+import { Box, Button, Typography, styled } from '@mui/material'
 import { CallNow } from './components/CallNow'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/navigation'
@@ -118,13 +118,10 @@ export default function Home() {
 
       <section className={styles.services} id="services">
         <div className={styles.service}>
-          <h2>
-            This is a main<span> service you do</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio dui,
-            fermentum id augue.
-          </p>
+          <Typography component="h2" maxWidth={200}>
+            {t('services.left.title')}
+          </Typography>
+          <p>{t('services.left.subtitle')}</p>
 
           <Button
             onClick={() => router.push('/contact')}
@@ -143,13 +140,10 @@ export default function Home() {
           </Button>
         </div>
         <div className={styles.service}>
-          <h2>
-            This is THE main<span> service you do</span>
-          </h2>
-          <p>
-            Notice how this one is bigger and darker, this is your main service you
-            provide.
-          </p>
+          <Typography component="h2" maxWidth={200}>
+            {t('services.center.title')}
+          </Typography>
+          <p>{t('services.center.subtitle')}</p>
           <Button
             onClick={() => router.push('/contact')}
             sx={{
@@ -167,13 +161,10 @@ export default function Home() {
           </Button>
         </div>
         <div className={styles.service}>
-          <h2>
-            This is a main<span> service you do</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio dui,
-            fermentum id augue .
-          </p>
+          <Typography component="h2" maxWidth={200}>
+            {t('services.right.title')}
+          </Typography>
+          <p>{t('services.right.subtitle')}</p>
           <Button
             onClick={() => router.push('/contact')}
             sx={{

@@ -2,6 +2,7 @@
 import { Box, styled, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const StyledImage = styled(Image)({
   display: 'inline-block',
@@ -11,6 +12,7 @@ const StyledImage = styled(Image)({
 
 export const CallNow: React.FC = () => {
   const theme = useTheme()
+  const { t } = useTranslation()
   const SHARED_SX = {
     color: theme.palette.mode === 'light' ? '#000' : '#fff',
     display: 'block',
@@ -39,7 +41,7 @@ export const CallNow: React.FC = () => {
   }
 
   return (
-    <Box component="a" href="tel:555-213-9120" sx={WRAPPER_SX}>
+    <Box component="a" href={`tel:${t('main.phone')}`} sx={WRAPPER_SX}>
       <StyledImage
         decoding="async"
         src={
@@ -54,10 +56,10 @@ export const CallNow: React.FC = () => {
       />
       <div>
         <Box component="span" sx={TEXT_SX}>
-          Call Now
+          {t('main.call')}
         </Box>
         <Box component="span" sx={NUMBER_SX}>
-          (555) 213-9120
+          {t('main.phone')}
         </Box>
       </div>
     </Box>

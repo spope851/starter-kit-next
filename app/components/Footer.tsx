@@ -25,20 +25,16 @@ export const Footer: React.FC = () => {
               height="91"
             />
           </a>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-            mollitia sequi placeat dignissimos adipisci explicabo excepturi a beatae
-            architecto autem.
-          </p>
+          <p>{t('description')}</p>
         </div>
         <div className="right-section">
           <div className="lists">
             <ul>
               <li>
-                <h2>{t('company')}</h2>
+                <h2>{t('helpLinks.company.title')}</h2>
               </li>
               <li>
-                <a onClick={() => router.push('/')}>Home</a>
+                <a onClick={() => router.push('/')}>{t('helpLinks.company.home')}</a>
               </li>
               <li>
                 <a onClick={() => router.push('/about')}>About Us</a>
@@ -49,15 +45,17 @@ export const Footer: React.FC = () => {
             </ul>
             <ul>
               <li>
-                <h2>{t('support')}</h2>
+                <h2>{t('helpLinks.support.title')}</h2>
               </li>
               <li>
-                <a onClick={() => router.push('/contact')}>Contact Us</a>
+                <a onClick={() => router.push('/contact')}>
+                  {t('helpLinks.support.contact')}
+                </a>
               </li>
             </ul>
             <ul>
               <li>
-                <h2>{t('contact')}</h2>
+                <h2>{t('helpLinks.contact.title')}</h2>
               </li>
               <li>
                 <Image
@@ -69,7 +67,7 @@ export const Footer: React.FC = () => {
                   height="24"
                 />
                 <a onClick={() => router.push('/contact')} target="_blank">
-                  Somewhere, Tx
+                  {t('helpLinks.contact.location')}
                 </a>
               </li>
               <li>
@@ -81,7 +79,9 @@ export const Footer: React.FC = () => {
                   width="24"
                   height="24"
                 />
-                <a href="tel:555-213-9120">(555) 213-9120</a>
+                <a href={`tel:${t('helpLinks.contact.phone')}`}>
+                  {t('helpLinks.contact.phone')}
+                </a>
               </li>
               <li>
                 <Image
@@ -92,7 +92,9 @@ export const Footer: React.FC = () => {
                   width="24"
                   height="24"
                 />
-                <a href="mailto:info@email.com">info@email.com</a>
+                <a href={`mailto:${t('helpLinks.contact.email')}`}>
+                  {t('helpLinks.contact.email')}
+                </a>
               </li>
             </ul>
           </div>
@@ -106,7 +108,7 @@ export const Footer: React.FC = () => {
                 width: '13.88888889em',
               }}
             >
-              Call to action button
+              {t('callToAction')}
             </Button>
           </div>
         </div>

@@ -19,12 +19,9 @@ export default function Home() {
 
       <section className={styles.form}>
         <div className={styles.leftSection}>
-          <span className={styles.topper}>Business Name</span>
-          <h2>Send a Message</h2>
-          <p>
-            If you have any questions or concerns please feel free to reach out to
-            us. we respond to every call and email.
-          </p>
+          <span className={styles.topper}>{t('main.businessName')}</span>
+          <h2>{t('main.title')}</h2>
+          <p>{t('main.subtitle')}</p>
           <form
             id="contact"
             className={styles.contact}
@@ -34,12 +31,12 @@ export default function Home() {
             data-netlify="true"
           >
             <div className={styles.inputGroup}>
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">{t('main.form.name.label')}</label>
               <input
                 aria-label="name"
                 className={styles.name}
                 name="name"
-                placeholder="Full Name"
+                placeholder={t('main.form.name.placeholder')}
                 type="text"
                 tabIndex={1}
                 required
@@ -48,13 +45,13 @@ export default function Home() {
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t('main.form.email.label')}</label>
               <input
                 id="email"
                 aria-label="email"
                 className="input1 right"
                 name="email"
-                placeholder="Email Address"
+                placeholder={t('main.form.email.placeholder')}
                 type="email"
                 tabIndex={2}
                 required
@@ -63,13 +60,13 @@ export default function Home() {
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="phone">Phone</label>
+              <label htmlFor="phone">{t('main.form.phone.label')}</label>
               <input
                 id="phone"
                 aria-label="phone number"
                 className="input1"
                 name="phone"
-                placeholder="Phone Number"
+                placeholder={t('main.form.phone.placeholder')}
                 type="tel"
                 tabIndex={3}
                 required
@@ -77,13 +74,13 @@ export default function Home() {
               <div aria-hidden="true" className={styles.hoverBox}></div>
             </div>
             <div className={styles.inputGroup}>
-              <label htmlFor="location">Location</label>
+              <label htmlFor="location">{t('main.form.location.label')}</label>
               <input
                 id="location"
                 aria-label="location"
                 className="input1 right"
                 name="location"
-                placeholder="Your Location"
+                placeholder={t('main.form.location.placeholder')}
                 type="text"
                 tabIndex={4}
                 required
@@ -91,12 +88,12 @@ export default function Home() {
               <div aria-hidden="true" className={styles.hoverBox}></div>
             </div>
             <div className={styles.inputGroup}>
-              <label htmlFor="how">How did you hear about us</label>
+              <label htmlFor="how">{t('main.form.question.label')}</label>
               <input
                 id="how"
                 aria-label="how did you hear about us"
                 name="hear"
-                placeholder="How Did You Hear About Us"
+                placeholder={t('main.form.question.placeholder')}
                 type="text"
                 tabIndex={5}
                 required
@@ -105,12 +102,12 @@ export default function Home() {
             </div>
             <div className={styles.inputGroupTextarea}>
               <div className={styles.inputGroup}>
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message">{t('main.form.message.label')}</label>
                 <textarea
                   id="message"
                   aria-label="write your message"
                   name="message"
-                  placeholder="Tell us about what you need help with"
+                  placeholder={t('main.form.message.placeholder')}
                   tabIndex={6}
                   required
                 ></textarea>
@@ -136,24 +133,27 @@ export default function Home() {
         </div>
         <div className={styles.contactRight}>
           <div className={styles.infoGroup}>
-            <span className={styles.heading}>Location</span>
-            <span className={styles.info}>Somewhere, TX</span>
+            <span className={styles.heading}>{t('main.aside.location.label')}</span>
+            <span className={styles.info}>{t('main.aside.location.value')}</span>
           </div>
           <div className={styles.infoGroup}>
-            <span className={styles.heading}>Phone</span>
-            <a className={styles.info} href="tel:555-213-9120">
-              (555) 213-9120
+            <span className={styles.heading}>{t('main.aside.phone.label')}</span>
+            <a className={styles.info} href={`tel:${t('main.aside.phone.value')}`}>
+              {t('main.aside.phone.value')}
             </a>
           </div>
           <div className={styles.infoGroup}>
-            <span className={styles.heading}>Email</span>
-            <a className={styles.info} href="mailto:info@email.com">
-              info@email.com
+            <span className={styles.heading}>{t('main.aside.email.label')}</span>
+            <a
+              className={styles.info}
+              href={`mailto:${t('main.aside.email.value')}`}
+            >
+              {t('main.aside.email.value')}
             </a>
           </div>
           <div className={styles.infoGroup}>
-            <span className={styles.heading}>Hours</span>
-            <span className={styles.info}>Mon to Sat: 9am to 7pm</span>
+            <span className={styles.heading}>{t('main.aside.hours.label')}</span>
+            <span className={styles.info}>{t('main.aside.hours.value')}</span>
           </div>
         </div>
       </section>
